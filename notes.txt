@@ -30,7 +30,9 @@ WHERE column_name = 'value'; {[LIKE][%value%]}  {[AND]}
 UPDATE table_name
 SET column1 = 'value1', column2 = 'value2', ...
 WHERE columnA = 'valueA';
-(D)
+(D) * Caution *
 DELETE FROM table_name WHERE column_name = 'value';
+* DANGER *
+TRUNCATE table_name;
 
 
