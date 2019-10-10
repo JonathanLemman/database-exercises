@@ -1,4 +1,4 @@
-# Foundation
+# ------- Foundation -------
 CREATE DATABASE database_name;
 USE database_name;
 CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
@@ -16,16 +16,21 @@ DROP USER 'username'@'hostname';
 DROP TABLE table_name [IF EXISTS];
 DROP DATABASE database_name;
 
-# Basic Statements CRUD
+
+
+# ------- Basic Statements CRUD -------
 (C)
 INSERT INTO table_name(field1, field2, ...)
 VALUES('value1', 'value2', ...);
 (R)
 SELECT [*]column1, column2, ...
 FROM table_name
-WHERE column_name = 'value';
-SELECT [*]column1, column2, ... FROM table_name;
-SELECT [*]column1, column2, ... FROM table_name WHERE field_name (> + operator - <) value;
-SELECT [*]column1, column2, ... FROM table_name WHERE field_name (> + operator - <) value (AND) value;
+WHERE column_name = 'value'; {[LIKE][%value%]}  {[AND]}
+(U)
+UPDATE table_name
+SET column1 = 'value1', column2 = 'value2', ...
+WHERE columnA = 'valueA';
+(D)
+DELETE FROM table_name WHERE column_name = 'value';
 
 
