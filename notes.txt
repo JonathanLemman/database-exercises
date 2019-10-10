@@ -1,0 +1,27 @@
+# Foundation
+CREATE DATABASE database_name;
+USE database_name;
+CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
+GRANT permissions ON database_name.table_name TO 'username'@'hostname' [WITH GRANT OPTION];
+CREATE TABLE table_name [IF NOT EXISTS](
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    field_name_2 TYPE,
+    ...
+    PRIMARY KEY(id)
+);
+SHOW TABLES;
+DESCRIBE table_name;
+SHOW CREATE TABLE table_name;
+DROP USER 'username'@'hostname';
+DROP TABLE table_name [IF EXISTS];
+DROP DATABASE database_name;
+
+# Basic Statements CRUD
+(C)
+INSERT INTO table_name(field1, field2, ...)
+VALUES('value1', 'value2', ...);
+(R)
+SELECT [*]column1, column2, ... FROM table_name;
+SELECT [*]column1, column2, ... FROM table_name WHERE field_name = value;
+
+
