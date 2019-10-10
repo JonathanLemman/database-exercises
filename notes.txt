@@ -21,7 +21,11 @@ DROP DATABASE database_name;
 INSERT INTO table_name(field1, field2, ...)
 VALUES('value1', 'value2', ...);
 (R)
+SELECT [*]column1, column2, ...
+FROM table_name
+WHERE column_name = 'value';
 SELECT [*]column1, column2, ... FROM table_name;
-SELECT [*]column1, column2, ... FROM table_name WHERE field_name = value;
+SELECT [*]column1, column2, ... FROM table_name WHERE field_name (> + operator - <) value;
+SELECT [*]column1, column2, ... FROM table_name WHERE field_name (> + operator - <) value (AND) value;
 
 
