@@ -10,7 +10,8 @@ ORDER BY last_name, first_name;
 -- Find all employees whose last name starts with 'E'
 SELECT emp_no, first_name, last_name
 FROM employees
-WHERE last_name Like 'e%';
+WHERE last_name Like 'e%'
+ORDER BY emp_no;
 
 -- Find all employees hired in the 90s
 SELECT emp_no, first_name, last_name, hire_date
