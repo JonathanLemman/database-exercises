@@ -52,10 +52,11 @@ FROM employees
 WHERE last_name LIKE 'e%' AND last_name LIKE '%e';
 
 -- Find all employees hired in the 90s and born on Christmas
-SELECT DATEDIFF(curdate(), hire_date) as time_difference
+SELECT CONCAT(first_name, ' ', last_name) as full_name,
+DATEDIFF(curdate(), hire_date) as days_worked
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'
-  AND birth_date LIKE '%-12-25'
+AND birth_date LIKE '%-12-25'
 ORDER BY birth_date,hire_date desc;
 
 -- Find all employees with a 'q' in their last name but not 'qu'
