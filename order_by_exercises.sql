@@ -5,13 +5,13 @@ use employees;
 SELECT emp_no, first_name, last_name
 FROM employees
 WHERE first_name IN ('Irena','Vidya','Maya')
-ORDER BY last_name, first_name;
+ORDER BY last_name desc, first_name desc;
 
 -- Find all employees whose last name starts with 'E'
 SELECT emp_no, first_name, last_name
 FROM employees
 WHERE last_name Like 'e%'
-ORDER BY emp_no;
+ORDER BY emp_no desc;
 
 -- Find all employees hired in the 90s
 SELECT emp_no, first_name, last_name, hire_date
