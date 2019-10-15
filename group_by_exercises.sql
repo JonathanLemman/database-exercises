@@ -26,6 +26,6 @@ ORDER BY COUNT(*);
 SELECT count(*), gender
 FROM employees
 WHERE first_name = 'Irena'
-   OR first_name = 'Vidya'
-   OR first_name = 'Maya'
+OR first_name = 'Vidya'
+OR first_name = 'Maya'
 group by gender;
