@@ -22,3 +22,13 @@ JOIN departments
 ON departments.dept_no = dept_manager.dept_no
 WHERE dept_manager.to_date > now() AND employees.employees.gender = 'f'
 order by departments.dept_name;
+
+# Find the current titles of employees currently working in the Customer Service department.
+
+SELECT titles.title as Title, count(*) as Count
+from titles
+join employees on titles.emp_no = employees.emp_no
+join dept_emp on employees.emp_no = dept_emp.emp_no
+join departments on dept_emp.dept_no = departments.dept_no
+where departments.dept_name = 'customer service' AND titles.to_date > now()
+group by titles.title;
